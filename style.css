@@ -11,6 +11,37 @@ section{
 #game-screen{
     height: 500px;
     width: 800px;
-    border-radius: 3%;
+    border-radius: 5px;
     background-color: gray;
+}
+.key-WASD{
+    position: relative;
+    height:82px ;/* Box = (40 * 2) + shadow = (2)*/
+    width: 126px;/* Box = (40 * 3) + shadow = (2*3)*/
+}
+#key-W, #key-A, #key-S, #key-D{
+    position: absolute;
+    font-size: 30px;
+    text-align: center;
+    height: 40px;
+    width: 40px;
+    color: rgb(119, 107, 85);
+    background-color: wheat;
+    border-radius: 5px;
+    box-shadow:2px 2px;
+}
+#key-W{
+    left:43px;
+}
+#key-A{
+    bottom:0px;
+}
+#key-D{
+    right: 0px;
+    bottom:0px;
+}
+#key-S{
+    left:43px;
+    bottom: 0;
+    background-color: rgb(228, 200, 150);
 }
