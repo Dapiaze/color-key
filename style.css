@@ -9,6 +9,7 @@ section{
     align-items: center;
 }
 #game-screen{
+    position: relative;
     height: 500px;
     width: 800px;
     border-radius: 5px;
@@ -16,8 +17,13 @@ section{
 }
 .key-WASD{
     position: relative;
+    
+    width:126px;/* Box = (40 * 3) + shadow = (2*3)*/
     height:82px ;/* Box = (40 * 2) + shadow = (2)*/
-    width: 126px;/* Box = (40 * 3) + shadow = (2*3)*/
+
+    top:209px;/* Center => height= 500 /2 = 250 - box = (82/2)= 41 */
+    left: 337px;/*Center => width = 800 /2 = 400 - Box = (126/2)=63  */
+    
 }
 #key-W, #key-A, #key-S, #key-D{
     position: absolute;
@@ -43,5 +49,27 @@ section{
 #key-S{
     left:43px;
     bottom: 0;
-    background-color: rgb(228, 200, 150);
+}
+#block-W, #block-A, #block-D, #block-S{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: rgb(26, 26, 26);
+}
+#block-W{
+    top:0px;
+    right:380px;/*center width=(800/2)=400 - box =(40/2)=20*/
+}
+#block-A{
+    bottom:209px;/*center height=(500/2)=250 - box =(40/2)=20 - boxKey = (43/2)=21 */
+    left:0px;
+}
+#block-D{
+    bottom:209px;/*center height=(500/2)=250 - box =(40/2)=20 - boxKey = (43/2)=21 */
+    right: 0px;
+}
+#block-S{
+    bottom:0px;
+    right:380px;/*center width=(800/2)=400 - box =(40/2)=20*/
 }
