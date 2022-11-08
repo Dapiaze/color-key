@@ -14,6 +14,7 @@ section{
     width: 800px;
     border-radius: 5px;
     background-color: gray;
+    overflow: hidden;
 }
 .key-WASD{
     position: relative;
@@ -56,20 +57,72 @@ section{
     height: 40px;
     border-radius: 5px;
     background-color: rgb(26, 26, 26);
+    
 }
 #block-W{
-    top:0px;
+    top: 0;
     right:380px;/*center width=(800/2)=400 - box =(40/2)=20*/
+    animation-name: animation-block-w;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
 #block-A{
     bottom:209px;/*center height=(500/2)=250 - box =(40/2)=20 - boxKey = (43/2)=21 */
     left:0px;
+    animation-name: animation-block-a;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
 }
 #block-D{
     bottom:209px;/*center height=(500/2)=250 - box =(40/2)=20 - boxKey = (43/2)=21 */
     right: 0px;
+    animation-name: animation-block-d;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
 }
 #block-S{
     bottom:0px;
     right:380px;/*center width=(800/2)=400 - box =(40/2)=20*/
+    animation-name: animation-block-s;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+@keyframes animation-block-w{
+    from{
+        transform: translateY(-40px);
+    }
+    to{
+        transform: translateY(209px);
+    }
+}
+@keyframes animation-block-a{
+    from{
+        transform: translateX(-40px);
+    }
+    to{
+        transform: translateX(337px);
+    }
+}
+@keyframes animation-block-d{
+    from{
+        transform: translateX(40px);
+    }
+    to{
+        transform: translateX(-337px);
+    }
+}
+@keyframes animation-block-s{
+    from{
+        transform: translateY(40px);
+    }
+    to{
+        transform: translateY(-209px);
+    }
 }
