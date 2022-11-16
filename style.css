@@ -51,6 +51,11 @@ section{
     left:43px;
     bottom: 0;
 }
+.key-press{
+    animation-name: animation-key-press;
+    animation-duration: 200ms;
+
+}
 #block-W, #block-A, #block-D, #block-S{
     position: absolute;
     width: 40px;
@@ -124,5 +129,12 @@ section{
     }
     to{
         transform: translateY(-209px);
+    }
+}
+@keyframes animation-key-press{
+    from{
+    }
+    to{
+        padding: 5px;
     }
 }
