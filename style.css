@@ -61,8 +61,20 @@ section{
     width: 40px;
     height: 40px;
     border-radius: 5px;
-    background-color: rgb(26, 26, 26);
-    
+    /*  aqua   lightgreen   coral          */
+}
+/* Box Color: */
+.azure-box{
+    background-color:azure;
+}
+.aqua-box{
+    background-color:aqua;
+}
+.lightgreen-box{
+    background-color:lightgreen;
+}
+.coral-box{
+    background-color:coral;
 }
 #block-W{
     top: 0;

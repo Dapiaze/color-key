@@ -9,19 +9,19 @@ const keyEvent =(event)=>{
 const keyPressAdd =(key)=>{
     if(key =='W'){
         keyWASD.children[0]= keyWASD.children[0].classList.add('key-press');
-        checkBlockPos(0);
+        blockChangeColor(0);
     }
     else if( key== 'A'){
         keyWASD.children[1]= keyWASD.children[1].classList.add('key-press');
-        checkBlockPos(1);
+        blockChangeColor(1);
     }
     else if( key== 'S'){
         keyWASD.children[2]= keyWASD.children[2].classList.add('key-press');
-        checkBlockPos(2);
+        blockChangeColor(2);
     }
     else if( key== 'D'){
         keyWASD.children[3]= keyWASD.children[3].classList.add('key-press');
-        checkBlockPos(3);
+        blockChangeColor(3);
     }
 }
 const keyPressRemove =()=>{
@@ -29,9 +29,23 @@ const keyPressRemove =()=>{
         keyWASD.children[cont]= keyWASD.children[cont].classList.remove('key-press');
     }
 }
-const checkBlockPos=(num)=>{
-    console.log('BLOCK POSITION:');
-    console.log('x:'+(blockWASD.children[num].getBoundingClientRect().x) +'y:'+(blockWASD.children[num].getBoundingClientRect().x-gamescreen.getBoundingClientRect().x));
-    return blockWASD.children[num].getBoundingClientRect();
+const blockChangeColor=(num)=>{
+    if(blockWASD.children[num].className=='azure-box'){
+        blockWASD.children[num].classList.remove('azure-box');
+        blockWASD.children[num].classList.add('aqua-box');
+    }
+    else if(blockWASD.children[num].className=='aqua-box'){
+        blockWASD.children[num].classList.remove('aqua-box');
+        blockWASD.children[num].classList.add('lightgreen-box');
+    }
+    else if(blockWASD.children[num].className=='lightgreen-box'){
+        blockWASD.children[num].classList.remove('lightgreen-box');
+        blockWASD.children[num].classList.add('coral-box');
+    }
+    else if(blockWASD.children[num].className=='coral-box'){
+        blockWASD.children[num].classList.remove('coral-box');
+        blockWASD.children[num].classList.add('azure-box');
+    }       
 }
 addEventListener('keydown',keyEvent);
+
