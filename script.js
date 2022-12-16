@@ -49,3 +49,4 @@ const blockChangeColor=(num)=>{
 }
 addEventListener('keydown',keyEvent);
 
+/*  Author: Tiago Dapiaze // Github: @Dapiaze  */
